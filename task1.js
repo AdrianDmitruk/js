@@ -181,14 +181,10 @@ let numberOfDays = Number(prompt('Введите количество дней, 
 
 let fullPrice = 40 * numberOfDays;
 
-let discountPrice;
-
 if (numberOfDays >= 7) {
-  discountPrice = fullPrice - 50;
-  console.log('Общая стоимость аренды со скидкой: ' + discountPrice + '$');
+  fullPrice -= 50;
 } else if (numberOfDays >= 3) {
-  discountPrice = fullPrice - 20;
-  console.log('Общая стоимость аренды со скидкой: ' + discountPrice + '$');
-} else {
-  console.log('Общая стоимость аренды: ' + fullPrice + '$');
+  fullPrice -= 20;
 }
+
+console.log('Cтоимость аренды ' + fullPrice + '$');
