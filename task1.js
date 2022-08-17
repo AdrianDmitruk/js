@@ -113,7 +113,7 @@ let num1 = Number(prompt('Введите первое число'));
 
 let num2 = Number(prompt('Введите второе число'));
 
-rest = num1 % num2;
+let rest = num1 % num2;
 
 if (rest === 0) {
   console.log('Число ' + num1 + ' кратно ' + 'числу ' + num2);
