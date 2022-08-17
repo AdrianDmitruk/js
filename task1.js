@@ -29,10 +29,12 @@ console.log(sum);
 let word = 'test';
 
 if (word === 'hidden') {
-  console.log('visible');
+  word = 'visible';
 } else if (word !== 'hidden') {
-  console.log('hidden');
+  word = 'hidden';
 }
+
+console.log(word);
 
 // ----------------------------------------------------------------------
 
@@ -46,14 +48,16 @@ if (word === 'hidden') {
 
 let count = 2;
 if (count === 0) {
-  console.log(1);
+  count = 1;
 } else if (count < 0) {
-  console.log('less then zero');
+  count = 'less then zero';
 } else if (count > 0) {
-  console.log(count * 10);
+  count *= 10;
 } else {
   console.log('Поздравляю! Вы написали слово :))))))))!');
 }
+
+console.log(count);
 
 // ----------------------------------------------------------------------
 
@@ -109,11 +113,11 @@ let num1 = Number(prompt('Введите первое число'));
 
 let num2 = Number(prompt('Введите второе число'));
 
-sum = num1 % num2;
+rest = num1 % num2;
 
-if (sum === 0) {
+if (rest === 0) {
   console.log('Число ' + num1 + ' кратно ' + 'числу ' + num2);
-} else if (sum > 0) {
+} else if (rest > 0) {
   console.log('Число ' + num1 + ' НЕ кратно ' + 'числу ' + num2);
 } else {
   console.log('Введен текст');
@@ -175,9 +179,9 @@ if (exam >= 90 || project >= 10) {
 
 let numberOfDays = Number(prompt('Введите количество дней, на которые нужно арендовать авто?'));
 
-let dayPrice = 40;
+let fullPrice = 40 * numberOfDays;
 
-fullPrice = dayPrice * numberOfDays;
+let discountPrice;
 
 if (numberOfDays >= 7) {
   discountPrice = fullPrice - 50;
