@@ -17,25 +17,25 @@ const testRange = (number, min, max) => {
   return result;
 };
 
-testRange(29, 2, 28);
-
 console.log(testRange(22, 2, 28));
 
 // ИЛИ =)))))
 
 const testRange = (number, min, max) => {
   let result = 0;
-  if ((number > min && number < max) || (number > min && number < max)) {
-    result = `Число ${number} прошло проверку`;
+  if (number > min || !number === min) {
+    if (number < max || !number === max) {
+      result = `Число ${number} прошло проверку`;
+    } else {
+      result = `Число ${number} не прошло проверку`;
+    }
   } else {
     result = `Число ${number} не прошло проверку`;
   }
   return result;
 };
 
-testRange(29, 2, 28);
-
-console.log(testRange(29, 2, 28));
+console.log(testRange(29, 4, 28));
 
 //----------------------------------------------------------------------------------------
 
@@ -113,8 +113,8 @@ let questions = [
 // Добавить в каждый объект дополнительное поле usersAnswer со значением null.
 // Решение должно работать для массива любой длины.
 
-for (items in questions) {
-  questions[items].usersAnswer = null;
+for (items of questions) {
+  items.usersAnswer = null;
 }
 
 console.log(questions);
