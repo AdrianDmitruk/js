@@ -113,7 +113,7 @@ let questions = [
 // Добавить в каждый объект дополнительное поле usersAnswer со значением null.
 // Решение должно работать для массива любой длины.
 
-for (items of questions) {
+for (let items of questions) {
   items.usersAnswer = null;
 }
 
