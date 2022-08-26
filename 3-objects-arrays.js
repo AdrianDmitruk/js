@@ -21,19 +21,7 @@ console.log(testRange(22, 2, 28));
 
 // ИЛИ =)))))
 
-const testRange = (number, min, max) => {
-  let result = 0;
-  if (number > min || !number === min) {
-    if (number < max || !number === max) {
-      result = `Число ${number} прошло проверку`;
-    } else {
-      result = `Число ${number} не прошло проверку`;
-    }
-  } else {
-    result = `Число ${number} не прошло проверку`;
-  }
-  return result;
-};
+const testRange = (number, min, max) => (!(number < min || number > max) ? 'куруто' : 'не круто');
 
 console.log(testRange(29, 4, 28));
 
